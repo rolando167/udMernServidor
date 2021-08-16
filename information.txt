@@ -1,0 +1,83 @@
+
+
+--------------------
+
+1.crear carpea serviro,
+
+>npm init
+
+--------------------
+https://www.npmjs.com/package/nodemon/v/1.18.10
+
+ : De manera global
+>npm install -g nodemon
+
+ : para que se intale como dependencia de desarrollo
+>npm install --save-dev nodemon
+--------------------**
+
+Desinstalar dependencias: https://docs.npmjs.com/uninstalling-packages-and-dependencies
+
+> npm uninstall <package_name>
+
+--------------------
+> npm i express mongoose dotenv
+
+--------------------
+Agregar en package:
+
+ "scripts": {
+    "start": "node ."
+  },
+
+--------------------
+# Crear cuenta :
+
+https://www.mongodb.com/es/cloud/atlas
+
+descargar: mongo db compass
+--------------------
+
+Descargar e instalar postman aplicacion de escritorio.
+--------------------
+
+Hashear los password en la db
+
+instalar:
+
+>npm install bcryptjs
+
+--------------------
+
+Instalar express validator
+
+>npm i express-validator
+
+--------------------
+
+Instalar: Autenticacion con JWT (json web token)
+
+> npm i jsonwebtoken
+
+
+https://jwt.io/
+
+
+--------------------
+Mongo snippe: 
+
+!mdbgum
+
+--------------------
+
+
+--------------------
+
+
+--------------------
+
+
+--------------------
+
+
+--------------------
