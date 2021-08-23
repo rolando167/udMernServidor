@@ -2,25 +2,25 @@ const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
 var tareaSchema = new mongoose.Schema({
-    name:{
+    nombre:{
         type:String,
         required:true,
         unique:true,
         index:true,
     },
-    email:{
-        type:String,
-        required:true,
+    estado:{
+        type:Boolean,
+        default:false,
+    },
+    creado:{
+        type:Date,
+        default: Date.now(),
         unique:true,
     },
-    mobile:{
-        type:String,
-        required:true,
-        unique:true,
-    },
-    password:{
-        type:String,
-        required:true,
+    proyecto:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Proyecto'
+        
     },
 });
 

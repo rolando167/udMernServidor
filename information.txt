@@ -71,6 +71,10 @@ Mongo snippe:
 --------------------
 
 
+Bajar dependencias al clonar proyecto.
+
+>npm install
+
 --------------------
 
 

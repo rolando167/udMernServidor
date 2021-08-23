@@ -9,14 +9,31 @@ const auth = require('../middleware/auth');
 router.post('/',
 	auth,
 	[
-        check('nombre', 'El Nombre es obligatorio').not().isEmpty()
-    ],
+		check('nombre', 'El Nombre es obligatorio').not().isEmpty()
+	],
 	ProyectoController.crearProyecto
 );
 
+//Obtener todos los proyectos
 router.get('/',
 	auth,
-	ProyectoController.crearProyecto
+	ProyectoController.obtenerProyecto
+);
+
+// Actualizar proyecto via ID
+// api/proyectos/:id
+router.put('/:id',
+	auth,
+	[
+		check('nombre', 'El Nombre es obligatorio').not().isEmpty()
+	],
+	ProyectoController.actualizarProyecto
+);
+
+//Eliminar un proyecto
+router.delete('/delete/:id',
+	auth,
+	ProyectoController.eliminarProyecto
 );
 
 module.exports = router;
