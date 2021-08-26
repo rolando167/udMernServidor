@@ -77,7 +77,7 @@ Bajar dependencias al clonar proyecto.
 
 --------------------
 
-
+ >npm i cors
 --------------------
 
 

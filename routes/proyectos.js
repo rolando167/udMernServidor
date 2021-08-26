@@ -31,7 +31,7 @@ router.put('/:id',
 );
 
 //Eliminar un proyecto
-router.delete('/delete/:id',
+router.delete('/:id',
 	auth,
 	ProyectoController.eliminarProyecto
 );

@@ -14,7 +14,7 @@ exports.obtenerTarea = async (req, res) => {
 		}
 
 		// revisar si el proyecto actual pertenence al usuario autenticado
-		if(existProyecto.creador.String() !== req.usuario.id){
+		if(existProyecto.creador.toString() !== req.usuario.id){
 			return res.status(401).json({msg: 'Proyecto No autorizado'});
 		}
 
@@ -47,7 +47,7 @@ exports.crearTarea = async (req, res) => {
 		}
 
 		// revisar si el proyecto actual pertenence al usuario autenticado
-		if(existProyecto.creador.String() !== req.usuario.id){
+		if(existProyecto.creador.toString() !== req.usuario.id){
 			return res.status(401).json({msg: 'Proyecto No autorizado'});
 		}
 
@@ -79,7 +79,7 @@ exports.actualizarTarea = async(req, res) => {
 
 
 		// revisar si el proyecto actual pertenence al usuario autenticado
-		if(existProyecto.creador.String() !== req.usuario.id){
+		if(existProyecto.creador.toString() !== req.usuario.id){
 			return res.status(401).json({msg: 'Proyecto No autorizado'});
 		}
 
@@ -124,7 +124,7 @@ exports.eliminarTarea = async(req, res) => {
 		const existProyecto = await Proyecto.find(proyecto);
 
 		// revisar si el proyecto actual pertenence al usuario autenticado
-		if(existProyecto.creador.String() !== req.usuario.id){
+		if(existProyecto.creador.toString() !== req.usuario.id){
 			return res.status(401).json({msg: 'Proyecto No autorizado'});
 		}
 
